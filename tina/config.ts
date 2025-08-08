@@ -8,7 +8,10 @@ export default defineConfig({
 	branch,
 	clientId: '26f19c2e-f677-4e78-a063-067027fb4eb2', // Get this from tina.io
 	token: '6bb9420b5ffe59abec9be535fd7f606f52facad5', // Get this from tina.io
-
+	cmsCallback: (cms) => {
+		cms.flags.set('branch-switcher', true)
+		return cms
+	},
 	build: {
 		outputFolder: 'admin',
 		publicFolder: 'public'
