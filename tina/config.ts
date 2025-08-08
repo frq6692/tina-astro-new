@@ -6,8 +6,8 @@ const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'main'
 
 export default defineConfig({
 	branch,
-	clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID, // Get this from tina.io
-	token: process.env.TINA_TOKEN, // Get this from tina.io,
+	clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+	token: process.env.TINA_TOKEN,
 	cmsCallback: (cms) => {
 		cms.flags.set('branch-switcher', true)
 		return cms

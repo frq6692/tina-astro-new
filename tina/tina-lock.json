@@ -1,6 +1,6 @@
 {
 	"schema": {
-		"version": { "fullVersion": "1.4.32", "major": "1", "minor": "4", "patch": "32" },
+		"version": { "fullVersion": "1.6.1", "major": "1", "minor": "6", "patch": "1" },
 		"meta": { "flags": ["experimentalData"] },
 		"collections": [
 			{
@@ -190,6 +190,12 @@
 							"kind": "NonNullType",
 							"type": { "kind": "NamedType", "name": { "kind": "Name", "value": "String" } }
 						}
+					},
+					{
+						"kind": "FieldDefinition",
+						"name": { "kind": "Name", "value": "hasReferences" },
+						"arguments": [],
+						"type": { "kind": "NamedType", "name": { "kind": "Name", "value": "Boolean" } }
 					},
 					{
 						"kind": "FieldDefinition",
@@ -1250,6 +1256,29 @@
 										"kind": "NamedType",
 										"name": { "kind": "Name", "value": "DocumentMutation" }
 									}
+								}
+							}
+						],
+						"type": {
+							"kind": "NonNullType",
+							"type": { "kind": "NamedType", "name": { "kind": "Name", "value": "DocumentNode" } }
+						}
+					},
+					{
+						"kind": "FieldDefinition",
+						"name": { "kind": "Name", "value": "createFolder" },
+						"arguments": [
+							{
+								"kind": "InputValueDefinition",
+								"name": { "kind": "Name", "value": "collection" },
+								"type": { "kind": "NamedType", "name": { "kind": "Name", "value": "String" } }
+							},
+							{
+								"kind": "InputValueDefinition",
+								"name": { "kind": "Name", "value": "relativePath" },
+								"type": {
+									"kind": "NonNullType",
+									"type": { "kind": "NamedType", "name": { "kind": "Name", "value": "String" } }
 								}
 							}
 						],
